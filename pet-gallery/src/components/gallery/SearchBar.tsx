@@ -8,7 +8,7 @@ const SearchBar: React.FC<Props> = ({ onSearch }) => {
   return (
     <input
       type="text"
-      placeholder="Search pets..."
+      placeholder="Filter pets (title or description)..."
       className="p-2 border border-gray-200 rounded"
       onChange={(e) => onSearch(e.target.value)}
     />
