@@ -13,6 +13,8 @@ const SortButton: React.FC<Props> = ({ onSort }) => {
     onSort(newOrder);
   };
 
+  console.log(sortOrder);
+
   return (
     <button
       onClick={toggleSortOrder}
