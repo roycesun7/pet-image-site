@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 // Define a TypeScript interface for the pet data expected from the API
 interface Pet {
-  imageUrl: string;
+  url: string;
   title: string;
   description: string;
   created: string; 

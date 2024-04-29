@@ -44,6 +44,9 @@ const Card = styled.div<{ isSelected: boolean }>`
 
 
 const ImageCard: React.FC<Props> = ({ imageUrl, title, description, created, isSelected, onSelect }) => {
+
+  // console.log(`Loading image: ${imageUrl}`);
+  
     return (
       <Card isSelected={isSelected} onClick={onSelect}>
         <img src={imageUrl} alt={title} className="w-full h-64 object-cover rounded" />

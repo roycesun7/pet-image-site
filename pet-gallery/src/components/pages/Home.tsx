@@ -6,7 +6,7 @@ import SortButton from '../gallery/SortButton';
 import useFetchPets from '../../hooks/useFetchPets';
 
 interface Image {
-  imageUrl: string;
+  url: string;
   title: string;
   description: string;
   created: string;

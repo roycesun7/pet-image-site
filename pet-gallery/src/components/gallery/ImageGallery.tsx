@@ -3,7 +3,7 @@ import ImageCard from './ImageCard';
 import { downloadImages } from './imageDownloader';
 
 interface Image {
-  imageUrl: string;
+  url: string;
   title: string;
   description: string;
   created: string;
@@ -39,9 +39,13 @@ const ImageGallery: React.FC<Props> = ({ images }) => {
   const handleDownloadSelected = async () => {
     const imageUrlsToDownload = images
       .filter((image) => selectedImages.has(image.title))
-      .map((image) => image.imageUrl);
+      .map((image) => image.url);
+      
     await downloadImages(imageUrlsToDownload);
   };
+
+  console.log(images); // Add this in the ImageGallery component before the return statement
+
 
   return (
     <div>
@@ -69,7 +73,7 @@ const ImageGallery: React.FC<Props> = ({ images }) => {
         {images.map((image) => (
           <ImageCard
             key={`${image.title}-${image.created}`}
-            imageUrl={image.imageUrl}
+            imageUrl={image.url}
             title={image.title}
             description={image.description}
             created={image.created}
