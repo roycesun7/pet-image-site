@@ -15,7 +15,6 @@ interface UseFetchPetsReturnType {
   error: string | null;
 }
 
-// The URL is now an argument to the hook, so you can reuse this hook for other endpoints if needed
 const useFetchPets = (url: string): UseFetchPetsReturnType => {
   const [data, setData] = useState<Pet[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
